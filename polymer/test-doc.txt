@@ -1,3 +1,0 @@
-hello there, just getting familiar with git ;)
-
-adding some text to check status
