@@ -1,0 +1,46 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<!-- import the paper-card custom element -->
+<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+<!-- import the youtube custom element -->
+<link rel="import" href="bower_components/google-youtube/google-youtube.html">
+<!-- import the button element -->
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+<!-- import the icons custom element -->
+<link rel="import" href="bower_components/iron-icons/av-icons.html">
+
+<dom-module id="video-dialog">
+  <template>
+  
+  <style>
+
+  </style>
+  
+      <paper-icon-button icon="av:play-circle-filled" on-tap"videoTap"></paper-icon-button>
+  
+	  <paper-dialog id="dialog-video-container">
+	    <paper-icon-button icon="arrows-back" dialog-dismiss></paper-icon-button>
+	    <google-youtube
+		  video-id="FHCYHldJi_g"
+		  height="100%"
+		  width="100%"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+	  </paper-dialog>
+
+  </template>
+
+  <script>
+    Polymer({
+	  is: "video-dialog",
+	  listeners {
+	    'tap': 'videoTap'
+	  },
+	  videoTap: function(e) {
+	    
+	  }
+	});
+  </script>
+  
+</dom-module>

@@ -1,0 +1,63 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<dom-module id="home-video">
+  <template>
+  
+  <style>
+  /* Home video stuff will need to be moved */
+  
+  #home-video-container {
+	display: flex;
+	height: 400px;
+	width: 100%;
+	background: url(../../images/home-video-bg.jpg) no-repeat 50% 20%;
+	align-items: center;
+	text-align: center;
+  }
+  #dialog-button-container {
+    display: block;
+	margin: auto;
+	padding: 20px;
+	color: black;
+  }
+  paper-icon-button.dialog-video-button {
+    height: 100px;
+	width: 100px;
+  }
+  </style>
+  
+    <div id="home-video-container">
+	
+	  <div id="dialog-button-container">
+        <paper-icon-button icon="av:play-circle-filled" on-tap="videoTap" class="dialog-video-button"></paper-icon-button>
+		<h3>Learn how New Mu works</h3>
+	  </div>
+  
+	  <paper-dialog id="videoOverlay" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+	    <google-youtube
+		  video-id="FHCYHldJi_g"
+		  height="630px"
+		  width="1120px"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+	  </paper-dialog>
+	  
+	</div>
+
+  </template>
+
+  <script>
+    Polymer({
+	  is: "home-video",
+	  
+	  videoTap: function() {
+	    this.$.videoOverlay.toggle();
+	  }
+	});
+	
+  </script>
+  
+</dom-module>

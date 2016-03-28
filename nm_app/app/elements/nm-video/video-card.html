@@ -1,0 +1,349 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=195375824144150";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<dom-module id="video-card">
+  <template>
+  
+  <style>
+    table {
+	  margin-top: 10px;
+	  width: 100%;
+      border-collapse: collapse;
+	}
+	table.video-meta {
+  	  text-align: left;
+	  font-size: 14px;
+	}
+	table.video-meta td {
+	  padding: 0 10px;
+	}
+	table.video-meta td:last-child {
+	  text-align: right;
+	}
+	table.video-rating {
+	  margin-top: 20px;
+	  font-size: 14px;
+  	  text-align: center;
+	  text-transform: uppercase;
+	}
+	.bigger-icon {
+	  --iron-icon-height: 28px;
+	  --iron-icon-width: 28px;
+	}
+	paper-button {
+	}
+	paper-badge {
+	  --paper-badge-background: red;
+    }
+	table.social {
+	  margin: 20px 0 10px 0;
+	  text-align: center;
+	}
+	#video-card-container {
+	  display: flex;
+	  height: 400px;
+	  align-items: center;
+	  justify-content: space-around;
+	  flex-wrap: wrap;
+	}
+	paper-card {
+	  margin: 10px 0;
+	}
+	paper-card .card-content {
+	  padding: 0px !important;
+	}
+	.green-icon {
+	  --iron-icon-fill-color: green;
+	}
+  </style>
+  
+    <div id="video-card-container">
+  
+    <paper-card>
+	  <div class="card-content">
+	    <google-youtube
+		  video-id="4Eo84jDIMKI"
+		  height="179px"
+		  width="350px"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+		<table class="video-meta">
+		  <tr>
+		    <td>CHVRCHES</td>
+			<td>Averate Rating: 2.97</td>
+		  </tr>
+		  <tr>
+		    <td>Leave a Trace</td>
+			<td>(29 ratings)</td>
+		  </tr>
+		</table>
+		<table class="video-rating">
+		  <tr>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:block" id="video-hate-four" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-down" id="video-dislike-four" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-up" id="video-like-four" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:favorite" id="video-love-four" class="bigger-icon"></iron-icon>
+			    <paper-badge for="video-love-four" label="4"></paper-badge>
+			  </paper-button>
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Hate</td>
+			<td>Dislike</td>
+			<td>Like</td>
+			<td>Love</td>
+		  </tr>
+		</table>
+		<table class="social">
+		  <tr>
+		    <td>
+			  <img src="../../images/whatsapp-logo.png">
+			</td>
+		    <td>
+			  <img src="../../images/facebook-logo.png">
+			</td>
+		    <td>
+			  <iron-icon icon="communication:textsms" class="green-icon"></iron-icon>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</paper-card>
+
+    <paper-card>
+	  <div class="card-content">
+	    <google-youtube
+		  video-id="FHCYHldJi_g"
+		  height="179px"
+		  width="350px"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+		<table class="video-meta">
+		  <tr>
+		    <td>Duke Dumont</td>
+			<td>Averate Rating: 2.72</td>
+		  </tr>
+		  <tr>
+		    <td>I Got U</td>
+			<td>(29 ratings)</td>
+		  </tr>
+		</table>
+		<table class="video-rating">
+		  <tr>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:block" id="video-hate-three" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-down" id="video-dislike-three" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-up" id="video-like-three" class="bigger-icon"></iron-icon>
+			    <paper-badge for="video-like-three" label="3"></paper-badge>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:favorite" id="video-love-three" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Hate</td>
+			<td>Dislike</td>
+			<td>Like</td>
+			<td>Love</td>
+		  </tr>
+		</table>
+		<table class="social">
+		  <tr>
+		    <td>
+			  <img src="../../images/whatsapp-logo.png">
+			</td>
+		    <td>
+			  <img src="../../images/facebook-logo.png">
+			</td>
+		    <td>
+			  <iron-icon icon="communication:textsms" class="green-icon"></iron-icon>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</paper-card>
+	
+<paper-card>
+	  <div class="card-content">
+	    <google-youtube
+		  video-id="REUPPN33tBs"
+		  height="179px"
+		  width="350px"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+		<table class="video-meta">
+		  <tr>
+		    <td>Austin Plaine</td>
+			<td>Averate Rating: 2.69</td>
+		  </tr>
+		  <tr>
+		    <td>Never Come Back Again</td>
+			<td>(29 ratings)</td>
+		  </tr>
+		</table>
+		<table class="video-rating">
+		  <tr>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:block" id="video-hate-two" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-down" id="video-dislike-two" class="bigger-icon"></iron-icon>
+			    <paper-badge for="video-dislike-two" label="2"></paper-badge>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-up" id="video-like-two" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:favorite" id="video-love-two" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Hate</td>
+			<td>Dislike</td>
+			<td>Like</td>
+			<td>Love</td>
+		  </tr>
+		</table>
+		<table class="social">
+		  <tr>
+		    <td>
+			  <img src="../../images/whatsapp-logo.png">
+			</td>
+		    <td>
+			  <img src="../../images/facebook-logo.png">
+			</td>
+		    <td>
+			  <iron-icon icon="communication:textsms" class="green-icon"></iron-icon>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</paper-card>
+	
+
+<paper-card>
+	  <div class="card-content">
+	    <google-youtube
+		  video-id="rh7qikFginI"
+		  height="179px"
+		  width="350px"
+		  rel="0"
+		  start="5"
+		  autoplay="0">
+		</google-youtube>
+		<table class="video-meta">
+		  <tr>
+		    <td>The Japanese House</td>
+			<td>Averate Rating: 2.55</td>
+		  </tr>
+		  <tr>
+		    <td>Clean</td>
+			<td>(29 ratings)</td>
+		  </tr>
+		</table>
+		<table class="video-rating">
+		  <tr>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:block" id="video-hate-one" class="bigger-icon"></iron-icon>
+                <paper-badge for="video-hate-one" label="1"></paper-badge>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-down" id="video-dislike-one" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:thumb-up" id="video-like-one" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		    <td>
+			  <paper-button>
+			    <iron-icon icon="icons:favorite" id="video-love-one" class="bigger-icon"></iron-icon>
+			  </paper-button>
+			</td>
+		  </tr>
+		  <tr>
+		    <td>Hate</td>
+			<td>Dislike</td>
+			<td>Like</td>
+			<td>Love</td>
+		  </tr>
+		</table>
+		<table class="social">
+		  <tr>
+		    <td>
+			  <img src="../../images/whatsapp-logo.png">
+			</td>
+		    <td>
+			  <img src="../../images/facebook-logo.png">
+			</td>
+		    <td>
+			  <iron-icon icon="communication:textsms" class="green-icon"></iron-icon>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</paper-card>
+
+	</div>
+  </template>
+
+  <script>
+    Polymer({
+	  is: "video-card"
+	});
+  </script>
+  
+</dom-module>

@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<dom-module id="intro-card">
+  <template>
+  
+  <style>
+  .intro-info {
+    padding: 30px;
+    display: flex;
+	align-items: center;
+	max-width: 1024px;
+	background-color: black;
+  }
+  .intro-card-content {
+    padding-left: 30px;
+  }
+  .intro-card-content h3 {
+    font-size: 24px;
+	line-height: 36px;
+    font-weight: 400;
+	color: white;
+  }
+  .intro-love-icon {
+    --iron-icon-fill-color: red;
+	--iron-icon-width: 32px;
+	--iron-icon-height: 32px;
+  }
+  </style>
+  
+    <paper-card class="">
+	  <div class="intro-info card-content">
+	    <img src="../../images/new-mu-logo.jpg" height="200px;">
+		<summary class="intro-card-content">
+		  <h3>New Mu (short for “new music”) is a socially-connected streaming music video network. Music fans want to discover new music they <iron-icon icon="favorite" class="intro-love-icon"></iron-icon> and share their discoveries with friends.</h3>
+		</summary>
+	  </div>
+	</paper-card>
+
+  </template>
+
+  <script>
+    Polymer({
+	  is: "intro-card"
+	});
+	
+  </script>
+  
+</dom-module>
